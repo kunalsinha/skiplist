@@ -1,0 +1,2 @@
+add a clear function to reset the skip list
+move dynamic allocation of nodes to SkipList::insert
