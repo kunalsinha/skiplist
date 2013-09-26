@@ -28,7 +28,7 @@ SkipList<T>::~SkipList()
 }
 
 template <class T>
-void SkipList<T>::insert(T *d)
+void SkipList<T>::insert(T &d)
 {
     int height;
     SkipNode<T> *predecessor[max_height+1];
@@ -36,7 +36,7 @@ void SkipList<T>::insert(T *d)
     
     for(height=cur_height; height >= 0; --height)
     {
-        while(traverser->fwdnodes[height] != NULL && *(traverser->fwdnodes[height]->getData()) < *d)
+        while(traverser->fwdnodes[height] != NULL && *(traverser->fwdnodes[height]->getData()) < d)
             traverser = traverser->fwdnodes[height];
         predecessor[height] = traverser;
     }
@@ -126,7 +126,6 @@ int main()
 {
     SkipList<int> sl(10, 0.5);
     int num;
-    int *p;
     char ch;
     while(true)
     {
@@ -137,8 +136,7 @@ int main()
             case 'i':
                 std::cout << "Enter a number: ";
                 std::cin >> num;
-                p = new int(num);
-                sl.insert(p);
+                sl.insert(num);
                 break;
             case 'r':
                 std::cout << "Enter the number to remove: ";

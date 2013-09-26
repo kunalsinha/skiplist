@@ -12,9 +12,9 @@ SkipNode<T>::SkipNode(int nh) : nodeheight(nh)
 }
 
 template <class T>
-SkipNode<T>::SkipNode(T *d, int nh) : nodeheight(nh)
+SkipNode<T>::SkipNode(T &d, int nh) : nodeheight(nh)
 {
-    data = d;
+    data = new T(d);
     fwdnodes = new SkipNode<T> *[nodeheight+1];
     for(int i=0; i<=nodeheight; ++i)
         fwdnodes[i] = NULL;

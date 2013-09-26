@@ -21,7 +21,7 @@ class SkipList
     public:
         SkipList(int mh, double p);
         ~SkipList();
-        void insert(T *d);
+        void insert(T &d);
         bool remove(T d);
         SkipNode<T> *search(T d);
         void print();

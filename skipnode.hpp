@@ -14,7 +14,7 @@ class SkipNode
         SkipNode **fwdnodes;
         
         SkipNode(int nh);
-        SkipNode(T *d, int nh);
+        SkipNode(T &d, int nh);
         ~SkipNode();
         T *getData();
         int getNodeHeight();
