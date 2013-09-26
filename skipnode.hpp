@@ -1,4 +1,4 @@
-/* The SkipNode class represents a node in the skip list */
+/* This class represents an individual node in the skip list */
 
 #ifndef _SKIPNODE_H
 #define _SKIPNODE_H

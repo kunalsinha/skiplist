@@ -2,6 +2,9 @@
 #include <new>
 #include "skipnode.hpp"
 
+/* Constructs a SkipNode of given height with data object and all the forward nodes
+ * set to NULL. Used to generate the sentinel head object of the SkipList.
+ */
 template <class T>
 SkipNode<T>::SkipNode(int nh) : nodeheight(nh)
 {
@@ -11,6 +14,9 @@ SkipNode<T>::SkipNode(int nh) : nodeheight(nh)
         fwdnodes[i] = NULL;
 }
 
+/* Constructs a SkipNode of given height with the given data sets all the forward nodes
+ * to NULL.
+ */
 template <class T>
 SkipNode<T>::SkipNode(T &d, int nh) : nodeheight(nh)
 {

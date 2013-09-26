@@ -25,7 +25,21 @@ class SkipList
         bool remove(T d);
         SkipNode<T> *search(T d);
         void clear();
-        void print();
+        
+        template <class Y>
+        friend std::ostream& operator<<(std::ostream& stream, const SkipList<Y>& ob);
 };
+
+template <class Y>
+std::ostream& operator<<(std::ostream& stream, const SkipList<Y>& ob)
+{
+    SkipNode<Y> *traverser = ob.head->fwdnodes[0];
+    while(traverser != NULL)
+    {
+        stream << *(traverser->getData()) << " ";
+        traverser = traverser->fwdnodes[0];
+    }
+    return stream;
+}
 
 #endif // end of _SKIPLIST_H

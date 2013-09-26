@@ -1,3 +1,5 @@
+/* Sample usage of the SkipList class */
+
 #include <iostream>
 #include "skiplist.hpp"
 
@@ -37,7 +39,7 @@ int main()
                 sl.clear();
                 break;
             case 'p':
-                sl.print();
+                std::cout << sl << std::endl;
                 break;
             case 'e':
                 break;

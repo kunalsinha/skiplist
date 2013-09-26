@@ -1,4 +1,6 @@
-/* A class that generates a random level between zero and a maximum number of levels */
+/* A class that generates a random level for a node to be inserted into the skip list
+ * with a given probability.
+ */
 
 #ifndef _RANDOMLEVEL_H
 #define _RANDOMLEVEL_H
