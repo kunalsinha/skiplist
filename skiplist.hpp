@@ -24,6 +24,7 @@ class SkipList
         void insert(T &d);
         bool remove(T d);
         SkipNode<T> *search(T d);
+        void clear();
         void print();
 };
 
