@@ -3,3 +3,7 @@
 !*.hpp
 !*.txt
 !makefile
+*.o
+*~
+#ignore all test binary files
+a
